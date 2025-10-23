@@ -5,12 +5,106 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Google Translator</title>
+   <link rel="icon" type="image/svg+xml" href="./assets/google-translate.svg"/>
    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+   <link rel="stylesheet" href="./css/styles.css">
+   <script type="module" src="./js/script.js"></script>
 </head>
 
 <body>
+   <div class="container">
+      <header class="header">
+         <div class="header-content">
+            <div class="logo">
+               <span class="google-g">G</span>
+               <span class="google-o">o</span>
+               <span class="google-oo">o</span>
+               <span class="google-g">g</span>
+               <span class="google-l">l</span>
+               <span class="google-e">e</span>
+               <span class="translate">Translate</span>
+            </div>
+         </div>
+      </header>
 
+      <section class="language-selection">
+         <div class="source-language">
+            <select id="sourceLanguage">
+               <!-- <option value="auto">Detect Language</option> -->
+               <option value="en">English</option>
+               <option value="es">Spanish</option>
+               <option value="fr">French</option>
+               <option value="de">German</option>
+               <option value="it">Italian</option>
+               <option value="pt">Portuguese</option>
+               <option value="ru">Russian</option>
+               <option value="ja">Japanese</option>
+               <option value="zh">Chinese</option>
+            </select>
+         </div>
+
+         <button class="swap-languages icon-button" id="swapLanguages">
+            <span class="material-symbols-outlined">
+               swap_horiz
+            </span>
+         </button>
+
+         </button>
+
+         <div class="target-language">
+            <select id="targetLanguage">
+               <option value="en">English</option>
+               <option value="es">Spanish</option>
+               <option value="fr">French</option>
+               <option value="de">German</option>
+               <option value="it">Italian</option>
+               <option value="pt">Portuguese</option>
+               <option value="ru">Russian</option>
+               <option value="ja">Japanese</option>
+               <option value="zh">Chinese</option>
+            </select>
+         </div>
+      </section>
+
+      <main class="translation-area">
+         <section class="input-section">
+            <div class="textarea-container">
+               <textarea 
+                  id="inputText"
+                  maxlength="5000"
+               ></textarea>
+            </div>
+            <footer class="input-controls">
+               <button class="icon-button mic-button" id="micButton">
+                  <span class="material-symbols-outlined">
+                     mic
+                  </span>
+               </button>
+            </footer>
+         </section>
+
+         <section class="output-section">
+            <div class="textarea-container">
+               <output id="outputText"></output>
+
+               <footer class="output-controls">
+                  <button class="icon-button copy-button" id="copyButton">
+                     <span class="material-symbols-outlined">
+                        content_copy
+                     </span>
+                  </button>
+
+                  <button class="icon-button -button" id="speakerButton">
+                     <span class="material-symbols-outlined">
+                        volume_up
+                     </span>
+                  </button>
+               </footer>
+            </div>
+         </section>"
+      </main>
+   </div>
 </body>
 
 </html>
